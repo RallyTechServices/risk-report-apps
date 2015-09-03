@@ -1,0 +1,7 @@
+{
+    "name": "Risk Story Status by Team",
+    "className": "risk-stories-by-team-and-state",
+    "server": "https://rally1.rallydev.com/",
+    "sdk": "2.0",
+    "apiKey": "_PUT_APIKEY_HERE_"
+}
