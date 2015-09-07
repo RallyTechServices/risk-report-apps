@@ -3,11 +3,11 @@
 <head>
     <title>High Risk Committed Pie</title>
     <!--  (c) 2015 Rally Software Development Corp.  All Rights Reserved. -->
-    <!--  Build Date: Mon Sep 07 2015 07:23:10 GMT-0600 (MDT) -->
+    <!--  Build Date: Mon Sep 07 2015 07:26:43 GMT-0600 (MDT) -->
     
     <script type="text/javascript">
-        var APP_BUILD_DATE = "Mon Sep 07 2015 07:23:10 GMT-0600 (MDT)";
-        var CHECKSUM = 69707435961;
+        var APP_BUILD_DATE = "Mon Sep 07 2015 07:26:43 GMT-0600 (MDT)";
+        var CHECKSUM = 69707439255;
     </script>
     <script type="text/javascript" src="/apps/2.0/sdk.js"></script>
 
@@ -433,7 +433,7 @@ Ext.define('Rally.technicalservices.InfoLink',{
      * to add a description of the app's use or functionality)
      */
     informationHtml: null,
-    readmeUrl: "https://github.com/RallyTechServices/risk-report-apps/risk-pie/blob/master/README.md",
+    readmeUrl: "https://github.com/RallyTechServices/risk-report-apps/blob/master/risk-pie/README.md",
     codeUrl: "https://github.com/RallyTechServices/risk-report-apps/tree/master/risk-pie/deploy",
 
     /**

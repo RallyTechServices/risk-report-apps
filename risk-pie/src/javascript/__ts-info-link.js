@@ -12,7 +12,7 @@ Ext.define('Rally.technicalservices.InfoLink',{
      * to add a description of the app's use or functionality)
      */
     informationHtml: null,
-    readmeUrl: "https://github.com/RallyTechServices/risk-report-apps/risk-pie/blob/master/README.md",
+    readmeUrl: "https://github.com/RallyTechServices/risk-report-apps/blob/master/risk-pie/README.md",
     codeUrl: "https://github.com/RallyTechServices/risk-report-apps/tree/master/risk-pie/deploy",
 
     /**
