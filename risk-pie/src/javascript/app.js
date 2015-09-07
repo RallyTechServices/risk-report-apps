@@ -78,7 +78,8 @@ Ext.define("risk-pie", {
 
                 var dt = this.add({
                     xtype: 'rallydatefield',
-                    fieldLabel: 'Start Date',
+                    fieldLabel: 'Committed Date',
+                    labelAlign: 'right',
                     value: default_date,
                     stateEvents: ['change'],
                     stateId: this.getContext().getScopedStateId('benchmark-date'),
