@@ -12,7 +12,9 @@ Ext.define('Rally.technicalservices.InfoLink',{
      * to add a description of the app's use or functionality)
      */
     informationHtml: null,
-    
+    readmeUrl: "https://github.com/RallyTechServices/risk-report-apps/blob/master/risk-pie/README.md",
+    codeUrl: "https://github.com/RallyTechServices/risk-report-apps/tree/master/risk-pie/deploy",
+
     /**
      * 
      * cfg {String} title
@@ -35,7 +37,24 @@ Ext.define('Rally.technicalservices.InfoLink',{
         this.title =  "<span class='icon-help'> </span>" + this.title;
         this.callParent(arguments);
     },
-    
+
+    _getInformationalHtml: function(){
+        var html = '';
+
+        if (this.informationHtml){
+            html += this.informationHtml + '<br/><br/>';
+        }
+
+        if (this.readmeUrl){
+            html += Ext.String.format("For details about the data in this app, please refer to the <a href=\"{0}\" target=\"_blank\">README file</a>.<br/><br/>", this.readmeUrl);
+        }
+
+        if (this.codeUrl){
+            html += Ext.String.format("Get the code <a href=\"{0}\" target=\"_blank\">here.</a><br/><br/>", this.codeUrl);
+        }
+        return html;
+    },
+
     _generateChecksum: function(string){
         var chk = 0x12345678,
             i;
@@ -63,7 +82,7 @@ Ext.define('Rally.technicalservices.InfoLink',{
                 text = response.responseText;
                 if ( CHECKSUM ) {
                     if ( CHECKSUM !== me._generateChecksum(text) ) {
-                        console.log("Checksums don't match!");
+                        //console.log("Checksums don't match!");
                         deferred.resolve(false);
                         return;
                     }
@@ -108,15 +127,16 @@ Ext.define('Rally.technicalservices.InfoLink',{
     },
     
     beforeRender: function() {
-        var me = this;
+        var me = this,
+            informational_html = this._getInformationalHtml();
         this.callParent(arguments);
 
-        if (this.informationHtml) {
+        if (informational_html && informational_html.length > 0) {
             this.addDocked({
                 xtype: 'component',
                 componentCls: 'intro-panel',
                 padding: 2,
-                html: this.informationHtml
+                html: informational_html
             });
         }
         
